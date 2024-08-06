@@ -1,0 +1,5 @@
+Students = {"Aman": 20 , "Rahul": 21 , "Rohit": 22 , "David": 23 , "Tarun": 24}
+Student_name = "Rahul"
+print(f"Age of {Student_name} : {Students[Student_name]}")
+Students["Ram"] = 26
+print("Updated Dictionary:",Students)
