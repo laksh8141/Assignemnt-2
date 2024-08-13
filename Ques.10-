@@ -1,0 +1,12 @@
+import textwrap
+def wrap_lines(filename, width):
+    with open(filename, 'r') as file:
+        lines = file.readlines()
+    
+    wrapped_lines = [textwrap.fill(line, width) for line in lines]
+    
+    with open(filename, 'w') as file:
+        file.writelines('\n'.join(wrapped_lines))
+
+# Example usage:
+# wrap_lines('example.txt', 50)
