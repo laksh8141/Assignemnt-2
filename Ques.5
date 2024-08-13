@@ -1,0 +1,16 @@
+#FUNCTION LENSORT
+def lensort(lst):
+    return sorted(lst, key=len)
+
+words = ["apple", "banana", "kiwi", "fig", "blueberry"]
+sorted_words = lensort(words)
+print(sorted_words)
+
+
+#FUNCTION EXTSORT
+def extsort(lst):
+    return sorted(lst, key=lambda x: x.split('.')[-1])
+
+files = ["file.txt", "image.jpeg", "document.pdf", "script.py", "archive.zip"]
+sorted_files = extsort(files)
+print(sorted_files)
