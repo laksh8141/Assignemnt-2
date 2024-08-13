@@ -1,0 +1,10 @@
+from collections import Counter
+def character_frequency(filename):
+    with open(filename, 'r') as file:
+        content = file.read()
+    
+    freq = Counter(content)
+    return freq
+
+freq = character_frequency('example.txt')
+print(freq)
