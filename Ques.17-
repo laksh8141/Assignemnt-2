@@ -1,0 +1,11 @@
+from collections import defaultdict
+def find_anagrams(words):
+    anagrams = defaultdict(list)
+    for word in words:
+        sorted_word = ''.join(sorted(word))
+        anagrams[sorted_word].append(word)
+    return [group for group in anagrams.values() if len(group) > 1]
+
+words = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat']
+anagrams = find_anagrams(words)
+print(anagrams)  # Output: [['eat', 'tea', 'ate'], ['tan', 'nat']]
