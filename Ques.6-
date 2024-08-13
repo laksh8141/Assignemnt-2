@@ -1,0 +1,35 @@
+# OPEN FUNCTION 
+file = open('example.txt', 'r')
+
+
+# READ FUNCTION
+content = file.read()
+print(content)
+
+
+# Open the file again 
+file = open('example.txt', 'r')
+
+# Readline
+line = file.readline()
+while line:
+    print(line.strip())  # .strip() removes the trailing newline character
+    line = file.readline()
+
+
+# Open a file for writing 
+file = open('output.txt', 'w')
+
+# Write in file
+file.write('Hello, World!\n')
+file.write('This is an example.\n')
+file.close()
+
+
+# Open a file for writing 
+file = open('output.txt', 'w')
+
+# Writing multiple lines 
+lines = ['First line\n', 'Second line\n', 'Third line\n']
+file.writelines(lines)
+file.close()
